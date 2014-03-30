@@ -1,5 +1,10 @@
 {
     "require": {
         "propel/propel": ">= 2.0"
+    },
+    "extra": {
+        "installer-paths": {
+            "lib/{$name}": ["propel/propel"]
+        }
     }
 }
