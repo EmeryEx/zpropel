@@ -1,4 +1,4 @@
 zf2-propel
 ==========
 
-Propel ORM module for Zend Framework 2
+Propel ORM 2 module for Zend Framework 2
