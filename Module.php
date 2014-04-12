@@ -13,7 +13,7 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
           require_once 'vendor/autoload.php';
 
           // setup Propel
-          require_once 'generated-conf/config.php';
+          include 'data/propel/proxy/generated-conf/config.php';
      }
 
      public function getAutoloaderConfig()
