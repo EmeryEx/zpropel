@@ -1,6 +1,6 @@
 <?php
 
-namespace Propel;
+namespace Zpropel;
 
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
@@ -22,13 +22,13 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
         $config = $serviceManager->get('Config');
         
         // Set up static service/event manager manager
-        require_once('src/Propel/Model/StaticManager.php');
+        require_once('src/Zpropel/Model/StaticManager.php');
         Model\StaticManager::setServiceLocator($serviceManager);
         $e = $serviceManager->get('SharedEventManager');
         Model\StaticManager::getEventManager()->setSharedManager($e);
         
         // Initialize Propel with the runtime configuration
-        $runtime_conf = $config['propel']['runtime-conf'];
+        $runtime_conf = $config['zpropel']['runtime-conf'];
         if (file_exists($runtime_conf)) {
             \Propel::init($runtime_conf);
         }
@@ -46,8 +46,8 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
 
      public function getConfig() {
          return array(
-            'propel' => array(
-                'runtime-conf' => 'data/propel/proxy/build/conf/zpropel-conf.php',
+            'zpropel' => array(
+                'runtime-conf' => 'data/zpropel/proxy/build/conf/zpropel-conf.php',
             ),
             'console' => array(
                 'router' => array(
@@ -56,7 +56,7 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
                             'options' => array(
                                 'route'    => 'propel-gen [convert-conf|insert-sql|sql|om]:script',
                                 'defaults' => array(
-                                    'controller' => 'Propel\Controller\Index',
+                                    'controller' => 'Zpropel\Controller\Index',
                                     'action'     => 'gen'
                                 )
                             )
@@ -66,7 +66,7 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface
             ),
             'controllers' => array(
                 'invokables' => array(
-                    'Propel\Controller\Index' => 'Propel\Controller\IndexController',
+                    'Zpropel\Controller\Index' => 'Zpropel\Controller\IndexController',
                 ),
             ),
          );
