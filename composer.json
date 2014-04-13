@@ -1,5 +1,20 @@
 {
+    "name": "4zend/zpropel",
+    "type": "library",
+    "description": "Use Propel ORM with Zend Framework 2",
+    "keywords": ["propel orm","zf2","zend framework"],
+    "homepage": "https://github.com/MarshallHouse/zpropel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marshall House",
+            "email": "marshall@4zend.com",
+            "homepage": "http://4zend.com/",
+            "role": "Developer"
+        }
+    ],
     "require": {
+        "php": ">=5.3.0",
         "propel/propel": ">= 2.0"
     }
 }
