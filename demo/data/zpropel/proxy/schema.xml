@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- namespace="Propel" is required -->
-<database name="zpropel" defaultIdMethod="native" namespace="Propel">
+<!-- namespace="Zpropel" is required -->
+<database name="zpropel" defaultIdMethod="native" namespace="Zpropel">
     <table name="book" phpName="Book">
         <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
         <column name="title" type="varchar" size="255" required="true" />
