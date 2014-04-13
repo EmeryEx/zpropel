@@ -12,6 +12,7 @@ Propel ORM module for Zend Framework 2
 View the demo directory for an example project and then create your project files at: `data/zpropel/proxy`
 
 * Add "Zpropel" to the modules key in config/application.config.php
+* Write your project files (schema.xml, runtime-conf.xml, build.properties) in data/zpropel/proxy
 * CD to your ZF2 application's public/ directory and run: `php index.php propel-gen`
 
 ### Usage
