@@ -22,11 +22,13 @@ final class StaticManager
     * Set service locator
     *
     * @param ServiceLocatorInterface $serviceLocator
-    * @return mixed
+    * @return void
     */
     public static function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
         self::$_serviceLocator = $serviceLocator;
+        
+        return;
     }
     
     /**
@@ -43,14 +45,16 @@ final class StaticManager
     * Set the event manager instance used by this context
     *
     * @param  EventManagerInterface $events
-    * @return mixed
+    * @return void
     */
     public static function setEventManager(EventManagerInterface $events)
     {
-        $identifiers = array(__CLASS__);
+        $identifiers = array(__CLASS__, 'zpropel');
         $events->setIdentifiers($identifiers);
         
         self::$_events = $events;
+        
+        return;
     }
     
     /**
