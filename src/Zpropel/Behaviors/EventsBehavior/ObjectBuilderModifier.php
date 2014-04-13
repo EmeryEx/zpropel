@@ -13,7 +13,7 @@ class EventsBehavior_ObjectBuilderModifier
         
         return '
 // fire "' . $event . '" event
-\Propel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
+\Zpropel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
         ';
     }
     
@@ -22,7 +22,7 @@ class EventsBehavior_ObjectBuilderModifier
         
         return '
 // fire "' . $event . '" event
-\Propel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
+\Zpropel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
         ';
     }
     
@@ -31,7 +31,7 @@ class EventsBehavior_ObjectBuilderModifier
         
         return '
 // fire "' . $event . '" event
-\Propel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
+\Zpropel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
         ';
     }
     
@@ -40,7 +40,7 @@ class EventsBehavior_ObjectBuilderModifier
         
         return '
 // fire "' . $event . '" event
-\Propel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
+\Zpropel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
         ';
     }
     
@@ -49,7 +49,7 @@ class EventsBehavior_ObjectBuilderModifier
         
         return '
 // fire "' . $event . '" event
-\Propel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
+\Zpropel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
         ';
     }
     
@@ -58,7 +58,7 @@ class EventsBehavior_ObjectBuilderModifier
         
         return '
 // fire "' . $event . '" event
-\Propel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
+\Zpropel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
         ';
     }
     
@@ -67,7 +67,7 @@ class EventsBehavior_ObjectBuilderModifier
         
         return '
 // fire "' . $event . '" event
-\Propel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
+\Zpropel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
         ';
     }
     
@@ -76,7 +76,7 @@ class EventsBehavior_ObjectBuilderModifier
         
         return '
 // fire "' . $event . '" event
-\Propel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
+\Zpropel\Model\StaticManager::getEventManager()->trigger(\'' . $event . '\', $this);
         ';
     }
 }

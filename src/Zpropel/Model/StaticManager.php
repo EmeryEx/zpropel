@@ -1,6 +1,6 @@
 <?php
 
-namespace Propel\Model;
+namespace Zpropel\Model;
 
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\EventManager\EventManagerInterface;

@@ -3,7 +3,7 @@
  * zpropel (http://4zend.com/)
  */
 
-namespace Propel\Controller;
+namespace Zpropel\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Console\Request as ConsoleRequest;
@@ -31,7 +31,7 @@ class IndexController extends AbstractActionController
         $d = getcwd();
         
         // cd to propel project directory
-        chdir('data/propel/proxy');
+        chdir('data/zpropel/proxy');
         
         // propel-gen {script}
         $script = $request->getParam('script');
