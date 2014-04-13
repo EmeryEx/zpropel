@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- namespace="Propel" is required -->
+<database name="zpropel" defaultIdMethod="native" namespace="Propel">
+    <table name="book" phpName="Book">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="title" type="varchar" size="255" required="true" />
+        <column name="isbn" type="varchar" size="24" required="true" phpName="ISBN"/>
+        <column name="publisher_id" type="integer" required="true"/>
+        <column name="author_id" type="integer" required="true"/>
+        
+        <foreign-key foreignTable="publisher" phpName="Publisher" refPhpName="Book">
+            <reference local="publisher_id" foreign="id"/>
+        </foreign-key>
+        <foreign-key foreignTable="author">
+            <reference local="author_id" foreign="id"/>
+        </foreign-key>
+        
+        <!-- Add ZF2 event triggers to this table -->
+        <behavior name="zpropel_events" />
+    </table>
+  
+    <table name="author" phpName="Author">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="first_name" type="varchar" size="128" required="true"/>
+        <column name="last_name" type="varchar" size="128" required="true"/>
+        
+        <behavior name="zpropel_events" />
+    </table>
+  
+    <table name="publisher" phpName="Publisher">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+        <column name="name" type="varchar" size="128" required="true" />
+   
+        <behavior name="zpropel_events" />
+    </table>
+</database>

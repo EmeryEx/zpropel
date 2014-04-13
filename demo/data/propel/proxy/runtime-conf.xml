@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <propel> 
+    <datasources default="zpropel">
+      <datasource id="zpropel">
+        <adapter>mysql</adapter> <!-- sqlite, mysql, myssql, oracle, or pgsql -->
+        <connection>
+          <dsn>mysql:host=localhost;dbname=zpropel</dsn>
+          <user>zpropel</user>
+          <password>password1234</password>
+        </connection>
+      </datasource>
+    </datasources>
+  </propel>
+</config>
